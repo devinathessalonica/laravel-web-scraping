@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class DashboardController extends Controller
+{
+
+    public function dashboard(Request $request)
+    {
+        return view()->make('dashboard')->with([
+            "page" => "dashboard",
+            "titlePage" => "dashboard",
+            "parent" => "dashboard",
+        ]);
+    }
+}
